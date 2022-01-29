@@ -29,7 +29,12 @@ function Nav() {
                 />
 
                 <ul className="nav_menu">
-                    <li className="nav_menu_selected">Home</li>
+                    <li
+                        className="nav_menu_selected"
+                        onClick={() => navigate("/")}
+                    >
+                        Home
+                    </li>
                     <li>TV Shows</li>
                     <li>Movies</li>
                     <li>New & Popular</li>

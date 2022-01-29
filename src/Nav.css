@@ -13,6 +13,23 @@
 .nav_contents {
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+
+.nav_menu {
+    position: fixed;
+    left: 150px;
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+li.nav_menu_selected {
+    font-weight: 700;
 }
 
 .nav_black {
@@ -34,5 +51,6 @@
     right: 20px;
     width: 32px;
     height: 32px;
+    border-radius: 5px;
     cursor: pointer;
 }

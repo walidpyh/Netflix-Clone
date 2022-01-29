@@ -1,0 +1,76 @@
+.accountScreen {
+    height: 100vh;
+    color: white;
+}
+
+.accountScreen_body {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+    max-width: 800px;
+}
+
+.accountScreen_info {
+    display: flex;
+}
+
+.accountScreen_details {
+    color: white;
+    margin-left: 80px;
+    flex: 1;
+}
+
+.accountScreen_membership {
+    /* color: #757575; */
+
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.accountScreen_cancel {
+    position: fixed;
+    width: 200px;
+    height: 37px;
+    margin: 30px 10px 10px 0;
+    border: none;
+    background-color: #e6e6e6;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.accountScreen_body > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    border-bottom: 1px solid #282c2d;
+    margin-bottom: 20px;
+}
+
+.accountScreen_details > h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.accountScreen_signout {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 5%;
+    width: 100%;
+    color: #fff;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.accountScreen_plans > h3 {
+    border-bottom: 1px solid #282c2d;
+    padding-bottom: 10px;
+}
+
+.accountScreen_info > img {
+    height: 100px;
+}

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
+import AccountScreen from "./screens/AccountScreen";
 
 function App() {
     const user = useSelector(selectUser);
@@ -24,11 +25,12 @@ function App() {
                 );
             } else {
                 //logged out
-                dispatch(logout);
+                dispatch(logout());
             }
         });
         return unsubscribe;
-    }, []);
+    }, [dispatch]);
+
     return (
         <div className="app">
             <BrowserRouter>
@@ -37,11 +39,13 @@ function App() {
                 ) : (
                     <Routes>
                         <Route exact path="/" element={<HomeScreen />}></Route>
+                        <Route
+                            exact
+                            path="/youraccount"
+                            element={<AccountScreen />}
+                        ></Route>
                     </Routes>
                 )}
-
-                {/*  <Route path="/YourAccount" element={<HomeScreen />}></Route>
-                    <Route path="/1" element={<LoginScreen />}></Route> */}
             </BrowserRouter>
         </div>
     );

@@ -9,6 +9,10 @@
     opacity: 1;
 }
 
+.plansScreen__info {
+    padding-right: 50px;
+}
+
 .plansScreen__plan__button {
     padding: 10px 20px;
     font-size: 1rem;

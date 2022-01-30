@@ -14,13 +14,13 @@ function AccountScreen() {
                 <h1>Account</h1>
 
                 <div className="accountScreen_info">
-                    {/* <img src="/assets/images/profile.png" alt="" /> */}
-                    <h3 className="accountScreen_membership">
+                    <img src="/assets/images/profile.png" alt="" />
+                    {/*  <h3 className="accountScreen_membership">
                         Membership & Billing
                     </h3>
                     <button className="accountScreen_cancel">
                         Cancel Membership
-                    </button>
+                    </button> */}
                     <div className="accountScreen_details">
                         <h2>{user.email}</h2>
                         <div className="accountScreen_plans">

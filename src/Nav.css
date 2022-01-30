@@ -17,10 +17,17 @@
 }
 
 .nav_menu {
-    position: fixed;
-    left: 150px;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 120px;
     display: flex;
     list-style-type: none;
+}
+
+@media (max-width: 550px) {
+    .nav_menu {
+        display: none;
+    }
 }
 
 li {

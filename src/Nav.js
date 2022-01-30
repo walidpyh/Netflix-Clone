@@ -5,12 +5,21 @@ import "./Nav.css";
 function Nav() {
     const [show, handleShow] = useState(false);
     const navigate = useNavigate();
+    const [dropdown, setDropdown] = useState(false);
 
     const transitionNavBar = () => {
         if (window.scrollY > 100) {
             handleShow(true);
         } else {
             handleShow(false);
+        }
+    };
+
+    const handleDropdown = () => {
+        if (!dropdown) {
+            setDropdown(true);
+        } else {
+            setDropdown(false);
         }
     };
 

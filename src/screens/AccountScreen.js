@@ -4,6 +4,7 @@ import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
 import Nav from "../Nav";
 import "./AccountScreen.css";
+import PlansScreen from "./PlansScreen";
 
 function AccountScreen() {
     const user = useSelector(selectUser);
@@ -25,7 +26,8 @@ function AccountScreen() {
                         <h2>{user.email}</h2>
                         <div className="accountScreen_plans">
                             <h3>Plans</h3>
-                            <p>Renewal date: 01/01/2055</p>
+                            <PlansScreen />
+
                             <button
                                 className="accountScreen_signout"
                                 onClick={() => {

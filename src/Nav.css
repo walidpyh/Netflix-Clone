@@ -33,6 +33,11 @@
 li {
     margin-left: 15px;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+li:hover {
+    opacity: 0.8;
 }
 
 li.nav_menu_selected {

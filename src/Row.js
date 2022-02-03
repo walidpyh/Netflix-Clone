@@ -31,16 +31,20 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
         if (trailerUrl) {
             setTrailerUrl("");
         } else {
-            axios
-                .get(
-                    `https://api.themoviedb.org/3/movie/${movie?.id}?api_key=${API_KEY}&append_to_response=videos&include_adult=false`
-                )
-                .then((response) => {
-                    const ytbKey = response.data.videos.results[0].key;
-                    console.log(ytbKey);
-                    setTrailerUrl(ytbKey);
-                })
-                .catch((error) => alert("there is no trailer for this movie"));
+            if (!isLargeRow) {
+                axios
+                    .get(
+                        `https://api.themoviedb.org/3/movie/${movie?.id}?api_key=${API_KEY}&append_to_response=videos&include_adult=false`
+                    )
+                    .then((response) => {
+                        const ytbKey = response.data.videos.results[0].key;
+                        console.log(ytbKey);
+                        setTrailerUrl(ytbKey);
+                    })
+                    .catch((error) =>
+                        alert("there is no trailer for this movie")
+                    );
+            }
         }
     };
     return (
